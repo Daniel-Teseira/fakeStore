@@ -106,13 +106,23 @@
 
 import { useForm } from "react-hook-form";
 import RequiredError from "../../components/FieldErrors/FieldErrors";
+import React, { useEffect, useState } from 'react'
 
 const Registerv3 = () => {
   const { register, handleSubmit, watch, formState } = useForm();
   const onSubmit = data => console.log(data);
 
   // console.log(watch("example")); // watch input value by passing the name of it
-  console.log(formState.errors)
+  // console.log(formState.errors)
+
+  useEffect(() => {
+    document.title = 'Registro'
+  
+    return () => {
+      document.title = 'Fake Store'
+    }
+  }, [])
+
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <div className="form-page text-white" >

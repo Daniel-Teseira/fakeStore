@@ -8,6 +8,13 @@ const Producto = () => {
 
   const [cantidad, setCantidad] = useState('1')
 
+  useEffect(() => {
+    document.title = 'Producto'
+  
+    return () => {
+      document.title = 'Fake Store'
+    }
+  }, [])
 
   const fetchProduct = async (id) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`)
@@ -21,6 +28,8 @@ const Producto = () => {
   }, [params.id])
 
   if (!product) return <h3 className='text-center mt-3 text-white'>Cargando producto...</h3>
+
+  
 
   return (
     <section className='product-detail-container container p-4 mt-5'>
