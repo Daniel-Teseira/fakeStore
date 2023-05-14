@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Login = () => {
+
+  const [loginData, setLoginData] = useState({    
+  })
+
+  const { email, password} = loginData
+
+  const onChange = (event) => {
+  }
   
+  useEffect(() => {
+    document.title = 'Login'
+  
+    return () => {
+      document.title = 'Fake Store'
+    }
+  }, [])
+  
+
   return (
     <div className='form-page mt-5 text-white'>
       <h1>Login</h1>
