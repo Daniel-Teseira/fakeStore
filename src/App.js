@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import Nav from './components/Navbar/Navbar';
 import Cart from './pages/Cart/Cart';
-import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Producto from './pages/Producto/Producto';
 // import Register from './pages/Register/Register';
 // import Registerv2 from './pages/Register/Registerv2';
 import Registerv3 from './pages/Register/Registerv3';
+import Home from './pages/Home/Home';
 
 function App() {
   
